@@ -7,7 +7,8 @@
 * {
     margin: 0;
 }
-body{
+
+body {
     background-color: var(--secondary);
 }
 
@@ -17,7 +18,7 @@ body{
     --secondary: #353946;
     --secondary-light: #252831;
     --orange: #D96E11;
-    --orange-shade:#a1540f;
+    --orange-shade: #a1540f;
 }
 
 /*Header*/
@@ -78,13 +79,19 @@ header {
     list-style: none;
 }
 
+/* NAV OCULTA */
+.inLineList {
+    display: none;
+}
+
 /*Main & products  */
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.producto{
+
+.producto {
     border-radius: 20px;
     width: 80%;
     padding: 1%;
@@ -95,22 +102,26 @@ main{
     align-items: center;
     text-align: center;
 }
-.producto p{
+
+.producto p {
     max-width: 90%;
     color: var(--accent);
     font-family: 'Montserrat';
 }
-main img{
+
+main img {
     margin-top: 5%;
     width: 400px;
     max-width: 80%;
     height: auto;
-    
+
 }
-.imgContainer{
-position: relative;
+
+.imgContainer {
+    position: relative;
 }
-.producto i{
+
+.producto i {
     color: var(--orange);
     position: absolute;
     top: 10%;
@@ -130,7 +141,8 @@ position: relative;
     font-size: 1em;
     font-weight: 800;
 }
-.producto button a, 
+
+.producto button a,
 .producto button a:visited {
     text-decoration: none;
     color: var(--main);
@@ -139,4 +151,110 @@ position: relative;
 
 .producto button:hover {
     background-color: var(--orange-shade);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .logo img {
+        width: 75px;
+        height: auto;
+    }
+
+    nav img {
+        width: 60px;
+        height: auto;
+    }
+
+    p,
+    li,
+    button {
+        font-size: 1.5em;
+    }
+
+    .producto button {
+        font-size: 1.9em;
+    }
+
+    .producto img {
+        width: 500px;
+        max-width: 80%;
+        height: auto;
+    }
+
+    main img:hover {
+        width: 550px;
+    }
+}
+
+@media(min-width: 1024px) {
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .producto {
+        width: 40%;
+        height: 700px;
+        justify-content: space-between;
+        margin-bottom: 1%;
+    }
+
+    .producto img {
+        width: 400px;
+        max-width: 80%;
+        height: auto;
+    }
+
+    main img:hover {
+        width: 450px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .inLineList {
+        margin: 0;
+        padding: 0;
+        margin-top: 2%;
+        display: block;
+        text-align: center;
+    }
+
+    .inLineList li {
+        font-family: 'Montserrat';
+        display: inline;
+        color: var(--orange);
+        font-size: 2em;
+        padding: 1%;
+    }
+
+    .producto p {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1480px) {
+    .producto {
+        width: 25%;
+        padding: 0%;
+        margin: 1%;
+    }
+
 }
